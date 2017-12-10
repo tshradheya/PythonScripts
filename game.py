@@ -8,9 +8,16 @@ score = 0;
 
 timeRemaining = 30;
 
+def init():
+    button.pack_forget()
+    e.pack()
+    e.focus_set()
+
+    startGame(None)
 
 def startGame(event):
-    e.pack()
+
+
     if timeRemaining == 30:
         countDown()
 
@@ -73,14 +80,16 @@ timeLabel.pack()
 displayLabel = tkinter.Label(root, text = "Color will appear here" , font=('Helvetica', 60))
 displayLabel.pack()
 
+button = tkinter.Button(root, text= "Press Button to Start Game", font=('Helvetica', 12), command = init)
+button.pack()
 
 e = tkinter.Entry(root)
-#run the 'startGame' function when the enter key is pressed.
-root.bind('<Return>', startGame)
-e.pack()
-e.pack_forget()
+
+e.bind('<Return>', startGame)
+
+#e.pack_forget()
 #set focus on the entry box.
-e.focus_set()
+#e.focus_set()
 
 #start the GUI
 root.mainloop()
