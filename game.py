@@ -10,7 +10,7 @@ timeRemaining = 30;
 
 def init():
     button.pack_forget()
-    e.pack()
+    e.pack(ipady = 10)
     e.focus_set()
 
     startGame(None)
@@ -83,7 +83,7 @@ displayLabel.pack()
 button = tkinter.Button(root, text= "Press Button to Start Game", font=('Helvetica', 12), command = init)
 button.pack()
 
-e = tkinter.Entry(root)
+e = tkinter.Entry(root, font=('Helvetica', 20))
 
 e.bind('<Return>', startGame)
 
