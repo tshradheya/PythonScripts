@@ -8,6 +8,6 @@ Developed using tkinter.( Needs Python 2.7 minimum)
 
 Rule: Need to type the color in which the word is typed.
 
-![](./img/intro.png)
+![Intro](./img/intro.PNG)
 
-![](./img/ongoing.png)
+![Ongoing Game](./img/ongoing.PNG)
